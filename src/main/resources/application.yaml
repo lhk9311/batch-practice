@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: batch-practice
+
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: sistsix
+
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.practice.batchpractice.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.practice.batchpractice: debug

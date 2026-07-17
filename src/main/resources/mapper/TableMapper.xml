@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.practice.batchpractice.mapper.TableMapper">
+
+    <!-- TABLE_A 데이터 건수 -->
+    <select id="selectTableACount"
+            resultType="int">
+        SELECT COUNT(*)
+        FROM TABLE_A
+    </select>
+
+    <!-- TABLE_A 건수를 TABLE_B에 저장 -->
+    <insert id="insertTableBCount">
+        INSERT INTO TABLE_B (
+        ID,
+        DATA_COUNT,
+        CREATED_AT
+        )
+        VALUES (
+        SEQ_TABLE_B.NEXTVAL,
+        #{dataCount},
+        SYSDATE
+        )
+    </insert>
+
+    <!-- TABLE_A 전체 데이터 조회 -->
+    <select id="selectAllTableA"
+            resultType="com.practice.batchpractice.domain.TableData">
+        SELECT
+        ID,
+        NAME,
+        EMAIL,
+        CREATED_AT
+        FROM TABLE_A
+        ORDER BY ID
+    </select>
+
+    <!-- CSV 데이터를 TABLE_C에 저장 -->
+    <insert id="insertTableC"
+            parameterType="com.practice.batchpractice.domain.TableData">
+        INSERT INTO TABLE_C (
+        ID,
+        NAME,
+        EMAIL,
+        CREATED_AT
+        )
+        VALUES (
+        #{id},
+        #{name},
+        #{email},
+        #{createdAt}
+        )
+    </insert>
+
+    <!-- TABLE_C 초기화 -->
+    <delete id="truncateTableC">
+        TRUNCATE TABLE TABLE_C
+    </delete>
+
+</mapper>
