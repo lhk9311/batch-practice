@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class CsvToTableCTasklet implements Tasklet {
 
-    // TABLE_C 초기화 및 INSERT에 사용할 MyBatis Mapper
+    // TABLE_C에 데이터 INSERT에 사용할 MyBatis Mapper
     private final TableMapper tableMapper;
 
     @Override
@@ -48,7 +48,8 @@ public class CsvToTableCTasklet implements Tasklet {
          * 이렇게 하면 배치를 여러 번 실행해도
          * 이전 데이터가 중복으로 남지 않는다.
          */
-        tableMapper.truncateTableC();
+        //삭제 - 분리
+        //tableMapper.truncateTableC();
 
         /*
          * try-with-resources

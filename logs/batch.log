@@ -1,0 +1,8 @@
+2026-07-18 14:49:52.144 [http-nio-8080-exec-1] INFO  c.p.b.b.listener.CsvToTableCStepListener - CSV → TABLE_C Step 실행 전 처리 시작
+2026-07-18 14:49:52.184 [http-nio-8080-exec-1] INFO  c.p.b.b.listener.CsvToTableCStepListener - 선행 배치 완료 확인: jobName=tableCsvJob, executionId=60, status=COMPLETED
+2026-07-18 14:49:52.185 [http-nio-8080-exec-1] INFO  c.p.b.b.listener.CsvToTableCStepListener - TABLE_C TRUNCATE 시작
+2026-07-18 14:49:52.364 [http-nio-8080-exec-1] INFO  c.p.b.b.listener.CsvToTableCStepListener - TABLE_C TRUNCATE 완료
+2026-07-18 14:49:52.375 [http-nio-8080-exec-1] INFO  c.p.b.batch.tasklet.CsvToTableCTasklet - CSV 헤더 = ID,NAME,EMAIL,CREATED_AT
+2026-07-18 14:49:52.479 [http-nio-8080-exec-1] INFO  c.p.b.batch.tasklet.CsvToTableCTasklet - CSV → TABLE_C 적재 완료
+2026-07-18 14:49:52.479 [http-nio-8080-exec-1] INFO  c.p.b.batch.tasklet.CsvToTableCTasklet - CSV 파일 경로 = table_a.csv
+2026-07-18 14:49:52.479 [http-nio-8080-exec-1] INFO  c.p.b.batch.tasklet.CsvToTableCTasklet - 총 적재 건수 = 100
