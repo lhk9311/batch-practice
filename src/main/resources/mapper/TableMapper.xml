@@ -6,7 +6,7 @@
 
 <mapper namespace="com.practice.batchpractice.mapper.TableMapper">
 
-    <!-- TABLE_A 데이터 건수 -->
+    <!-- TABLE_A 데이터 건수 읽기-->
     <select id="selectTableACount"
             resultType="int">
         SELECT COUNT(*)
