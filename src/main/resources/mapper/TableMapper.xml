@@ -57,8 +57,8 @@
     </insert>
 
     <!-- TABLE_C 초기화 -->
-    <delete id="truncateTableC">
+    <update id="truncateTableC">
         TRUNCATE TABLE TABLE_C
-    </delete>
+    </update>
 
 </mapper>
